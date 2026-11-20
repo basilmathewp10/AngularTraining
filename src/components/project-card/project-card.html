@@ -1,0 +1,11 @@
+<div class="container projects-container">
+    <div class="project-card">
+        <img [src]="projElement().projImg" [alt]="projElement().projTitle" class="project-image">
+        <div class="project-content">
+            <h3>{{ projElement().projTitle }}</h3>
+            <p class="project-description">{{ projElement().projDesc }}</p>
+            <p class="project-tech">{{ projElement().projTechStack }}</p>
+            <a [href]="projElement().gitLink" target="_blank" rel="noopener noreferrer" class="github-link">View on GitHub ↗</a>
+        </div>
+    </div>
+</div>

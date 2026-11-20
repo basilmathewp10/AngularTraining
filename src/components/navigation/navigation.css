@@ -1,0 +1,31 @@
+.quick-nav {
+    position: absolute;
+    right: 30px;
+    top: 40%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background: #1E2B27;
+    border: 1px solid #344B43;
+    border-radius: 12px;
+    padding: 20px;
+    width: 110px;
+}
+
+.quick-nav h3 {
+    color: #C8F0D2;
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+
+.quick-nav a {
+    color: #B8C9C0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.quick-nav a:hover {
+    color: #C8F0D2;
+}

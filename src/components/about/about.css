@@ -1,0 +1,160 @@
+
+.about-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 25px 20px 60px;
+}
+
+/* Main heading */
+.about-heading {
+    color: #C8F0D2;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 30px;
+    letter-spacing: 1px;
+}
+
+.about-heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #52796F;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Section cards */
+.about-section {
+    background-color: #1E2B27;
+    border: 1px solid #344B43;
+    border-radius: 12px;
+    padding: 22px 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-3px);
+}
+
+/* Section headings */
+.about-section h3 {
+    color: #C8F0D2;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+/* Paragraphs */
+.about-section p {
+    color: #B8C9C0;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 5px 0;
+}
+
+/* Education */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.education-item {
+    padding: 12px 15px;
+    border-left: 3px solid #52796F;
+    background-color: #263A33;
+    border-radius: 5px;
+}
+
+.education-item h4,
+.experience-item h4 {
+    color: #EAF1EC;
+    font-size: 17px;
+    margin: 0 0 6px;
+}
+
+.education-item span {
+    display: inline-block;
+    color: #8EB9A2;
+    font-size: 13px;
+    margin-right: 15px;
+}
+
+.score {
+    font-weight: 600;
+}
+
+/* Internship and certification */
+.experience-item {
+    padding: 10px 0;
+}
+
+.company-name {
+    color: #8EB9A2 !important;
+    font-weight: 600;
+}
+
+/* Tags */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.about-tag {
+    display: inline-block;
+    background-color: #263A33;
+    color: #C8F0D2;
+    padding: 9px 16px;
+    border: 1px solid #52796F;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Lists */
+.about-section ul {
+    padding-left: 22px;
+    margin: 0;
+}
+
+.about-section li {
+    color: #B8C9C0;
+    font-size: 15px;
+    line-height: 1.9;
+    padding-left: 5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+
+    .about-container {
+        padding: 20px 15px 40px;
+    }
+
+    .about-heading {
+        font-size: 26px;
+    }
+
+    .about-section {
+        padding: 18px;
+    }
+
+    .about-section h3 {
+        font-size: 18px;
+    }
+
+    .about-section p,
+    .about-section li {
+        font-size: 14px;
+    }
+
+    .about-tag {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}

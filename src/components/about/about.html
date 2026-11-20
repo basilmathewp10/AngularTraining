@@ -1,0 +1,83 @@
+<div class="container about-container">
+
+    <h1 class="about-heading">About Me</h1>
+
+    <!-- Personal and Professional Introduction -->
+    <section class="about-section">
+        <h3>Introduction</h3>
+        <p>{{ aboutData.introduction }}</p>
+    </section>
+
+    <!-- Education -->
+    <section class="about-section">
+        <h3>Education</h3>
+
+        @for (edu of aboutData.education; track edu.qualification) {
+            <div class="education-item">
+                <h4>{{ edu.qualification }}</h4>
+                <p>{{ edu.institution }}</p>
+
+                @if (edu.year) {
+                    <span>{{ edu.year }}</span>
+                }
+
+                <span class="score">{{ edu.score }}</span>
+            </div>
+        }
+    </section>
+
+    <!-- Work Experience -->
+    <section class="about-section">
+        <h3>Work Experience</h3>
+
+        @for (work of aboutData.workExperience; track work.company) {
+            <div class="experience-item">
+                <h4>{{ work.role }}</h4>
+                <p class="company-name">{{ work.company }}</p>
+                <p>{{ work.duration }}</p>
+                <p>{{ work.description }}</p>
+            </div>
+        }
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="about-section">
+        <h3>Technical Skills</h3>
+
+        @for (group of aboutData.technicalSkills; track group.category) {
+            <div class="skill-group">
+                <h4>{{ group.category }}</h4>
+
+                <div class="tag-list">
+                    @for (skill of group.skills; track skill) {
+                        <span class="about-tag">{{ skill }}</span>
+                    }
+                </div>
+            </div>
+        }
+    </section>
+
+    <!-- Areas of Interest -->
+    <section class="about-section">
+        <h3>Areas of Interest</h3>
+
+        <div class="tag-list">
+            @for (interest of aboutData.areasOfInterest; track interest) {
+                <span class="about-tag">{{ interest }}</span>
+            }
+        </div>
+    </section>
+
+    <!-- Achievements and Certifications -->
+    <section class="about-section">
+        <h3>Achievements & Certifications</h3>
+
+        @for (achievement of aboutData.achievements; track achievement.name) {
+            <div class="achievement-item">
+                <h4>{{ achievement.name }}</h4>
+                <p>{{ achievement.description }}</p>
+            </div>
+        }
+    </section>
+
+</div>

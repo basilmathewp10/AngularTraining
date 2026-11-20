@@ -5,3 +5,10 @@ body {
   color: #EAF1EC;
   font-family: Arial, sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+.page-section {
+    scroll-margin-top: 85px;
+}

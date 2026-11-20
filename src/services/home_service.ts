@@ -11,4 +11,12 @@ export class HomeService {
         const homeData : personalDataFormat = personalData;
         return homeData;
     }
+    getSkills(): string[]{
+        const homeData : personalDataFormat = personalData;
+        return homeData.techSkills;
+    }
+    getProjects(): string[]{
+        const homeData : personalDataFormat = personalData;
+        return homeData.projects;
+    }
 }

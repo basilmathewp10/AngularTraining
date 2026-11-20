@@ -1,22 +1,11 @@
-<header class="header-container">
-    <nav class="navbar">
-        <a routerLink="/"
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="{ exact: true}">Home</a>
-
-        <a routerLink="/About"
-           routerLinkActive="active">
-            About
-        </a>
-        
-        <a routerLink="/Projects"
-           routerLinkActive="active">
-            Projects
-        </a>
-
-        <a routerLink="/Contact"
-           routerLinkActive="active">
-            Contact
-        </a>
-    </nav>
+<header class="main-header">
+    <div class="navbar-container">
+        <nav class="main-nav">
+            <a [routerLink]="[]" fragment="home" [class.active]="activeSection() === 'home'">Home</a>
+            <a [routerLink]="[]" fragment="about" [class.active]="activeSection() === 'about'">About</a>
+            <a [routerLink]="[]" fragment="projects" [class.active]="activeSection() === 'projects'">Projects</a>
+            <a [routerLink]="[]" fragment="blog" [class.active]="activeSection() === 'blog'">Blog</a>
+            <a [routerLink]="[]" fragment="contact" [class.active]="activeSection() === 'contact'">Contact</a>
+        </nav>
+    </div>
 </header>

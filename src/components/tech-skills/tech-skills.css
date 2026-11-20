@@ -1,0 +1,39 @@
+.tech-container {
+    padding: 5px 20px;
+}
+
+.tech-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.text-center {
+    color: #C8F0D2;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.skill-badge {
+    display: inline-block;
+    background-color: #1E2B27;
+    color: #C8F0D2;
+    padding: 10px 20px;
+    border: 1px solid #52796F;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
