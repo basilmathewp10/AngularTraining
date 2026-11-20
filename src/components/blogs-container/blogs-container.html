@@ -1,0 +1,8 @@
+<h2 class="blog-heading">Blogs</h2>
+<div class = "container whole-container">
+    @for (eachBlog of blogLists; track eachBlog.articleId){
+        <blog-card [blogElement]="eachBlog"></blog-card>
+    } @empty {
+        <p>No blogs available.</p>
+    }
+</div>
