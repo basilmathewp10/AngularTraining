@@ -24,18 +24,18 @@ export class App {
 
     private router = inject(Router);
 
-    isBlogDetails = signal(false);
+    /*isBlogDetails = signal(false);*/
 
     constructor() {
 
-        this.isBlogDetails.set(this.router.url.startsWith('/blog/'));
+        //this.isBlogDetails.set(this.router.url.startsWith('/blog/'));
 
         this.router.events
             .pipe(filter(event => event instanceof NavigationEnd))
             .subscribe(() => {
-                this.isBlogDetails.set(
-                    this.router.url.startsWith('/blog/')
-                );
+                //this.isBlogDetails.set(
+                  //  this.router.url.startsWith('/blog/')
+                //);
             });
     }
 }

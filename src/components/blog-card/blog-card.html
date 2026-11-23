@@ -1,12 +1,11 @@
-<div class="container blog-container">
-    <div class="blog-card">
-        <img [src]="blogElement().thumbImg" alt="Article image" class="blog-image">
-        <div class="blog-content">
-            <h3>{{ blogElement().articleTitle }}</h3>
-            <p class="blog-description">{{ blogElement().articleDesc }}</p>
-            <p class="blog-date">{{ blogElement().pubDate }}</p>
-            <p class="blog-category">{{ blogElement().category }}</p>
-            <a [routerLink]="['/blog',blogElement().articleId]">Read More</a>
-        </div>
+<div class="blog-card">
+    <img [src]="blogElement().thumbImg" alt="Article image" class="blog-image">
+
+    <div class="blog-content">
+        <h3>{{ blogElement().articleTitle }}</h3>
+        <p class="blog-description">{{ blogElement().articleDesc }}</p>
+        <p class="blog-date">{{ blogElement().pubDate }}</p>
+        <p class="blog-category">{{ blogElement().category }}</p>
+        <a [routerLink]="['/blog', blogElement().articleId]">Read More</a>
     </div>
 </div>

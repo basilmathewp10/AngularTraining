@@ -1,8 +1,35 @@
 <h2 class="blog-heading">Blogs</h2>
-<div class = "container whole-container">
-    @for (eachBlog of blogLists; track eachBlog.articleId){
+<div class="blog-filter">
+
+    <button type="button" class="filter-btn" (click)="showDateFilter = !showDateFilter">
+        <span>Filter by Date</span>
+        <span>⌄</span>
+    </button>
+
+    @if (showDateFilter) {
+        <div class="date-filter">
+
+            <div class="filter-field">
+                <label for="startDate">From</label>
+                <input type="date" id="startDate" [value]="startDate" (change)="filterByDate($event, 'start')">
+            </div>
+
+            <div class="filter-field">
+                <label for="endDate">To</label>
+                <input type="date" id="endDate" [value]="endDate" (change)="filterByDate($event, 'end')">
+            </div>
+
+            <button type="button" class="clear-btn" (click)="clearFilter()">Clear</button>
+
+        </div>
+    }
+
+</div>
+
+<div class="blog-list">
+    @for (eachBlog of filteredBlogs; track eachBlog.articleId) {
         <blog-card [blogElement]="eachBlog"></blog-card>
     } @empty {
-        <p>No blogs available.</p>
+        <p>No blogs found for the selected date range.</p>
     }
 </div>
