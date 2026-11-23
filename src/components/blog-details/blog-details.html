@@ -1,0 +1,58 @@
+@if (blog) {
+
+    <div class="container blog-details-container">
+
+        <a routerLink="/" fragment="blog" class="back-link">
+            ← Back to Blogs
+        </a>
+
+        <div class="blog-header">
+
+            <span class="blog-category">{{ blog.category }}</span>
+
+            <h1>{{ blog.articleTitle }}</h1>
+
+            <p class="blog-meta">
+                {{ blog.pubDate }}
+            </p>
+
+            <p class="blog-description">
+                {{ blog.articleDesc }}
+            </p>
+
+            <img [src]="blog.thumbImg" [alt]="blog.articleTitle" class="blog-image">
+
+        </div>
+
+        <article class="blog-content">
+
+            @for (section of blog.articleContent; track section.heading) {
+
+                <section class="article-section">
+
+                    <h2>{{ section.heading }}</h2>
+
+                    @for (paragraph of section.paragraphs; track $index) {
+                        <p>{{ paragraph }}</p>
+                    }
+
+                </section>
+
+            }
+
+        </article>
+
+        <a routerLink="/" fragment="blog" class="back-link">
+            ← Back to Blogs
+        </a>
+
+    </div>
+
+} @else {
+
+    <div class="container text-center">
+        <h2>Blog Not Found</h2>
+        <a routerLink="/" fragment="blog">Return to Blogs</a>
+    </div>
+
+}

@@ -6,7 +6,7 @@
             <p class="blog-description">{{ blogElement().articleDesc }}</p>
             <p class="blog-date">{{ blogElement().pubDate }}</p>
             <p class="blog-category">{{ blogElement().category }}</p>
-            <!--<a [href]="blogElement().gitLink" target="_blank" rel="noopener noreferrer" class="github-link">View on GitHub ↗</a>-->
+            <a [routerLink]="['/blog',blogElement().articleId]">Read More</a>
         </div>
     </div>
 </div>

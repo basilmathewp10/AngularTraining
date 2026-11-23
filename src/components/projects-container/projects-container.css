@@ -2,13 +2,13 @@
     display : flex;
 }
 .proj-heading {
-    color: #244B37;
+    color: #8df8c1;
     font-size: 28px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
     padding-bottom: 12px;
-    border-bottom: 3px solid #8EB9A2;
+    border-bottom: 3px solid #c8fde1;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;

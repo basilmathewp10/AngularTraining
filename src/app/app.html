@@ -1,39 +1,36 @@
 
-<header-compo></header-compo>
+   @if (!isBlogDetails()){
+    <header-compo></header-compo>
 
-<main class="home-page">
+    <main class="home-page">
 
-    <!-- Home Section -->
-    <section id="home" class="page-section">
-        <quick-navs></quick-navs>
+        <section id="home" class="page-section">
+            <quick-navs></quick-navs>
+            <user-compo></user-compo>
+            <skills-compo></skills-compo>
+            <proj-compo></proj-compo>
+        </section>
 
-        <user-compo></user-compo>
-        <skills-compo></skills-compo>
-    </section>
+        <section id="about" class="page-section">
+            <about-compo></about-compo>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="page-section">
-        <about-compo></about-compo>
-    </section>
+        <section id="projects" class="page-section">
+            <proj-container></proj-container>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="page-section">
-        <proj-container></proj-container>
-    </section>
+        <section id="blog" class="page-section">
+            <blog-container></blog-container>
+        </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="page-section">
-        <!-- Your blog listing component goes here -->
-        <blog-container></blog-container>
-    </section>
+        <section id="contact" class="page-section">
+            <contact-container></contact-container>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="page-section">
-        <!-- Your contact component goes here -->
-        <h2>Contact</h2>
-    </section>
+        <section id="footer" class="page-section">
+            <footer-comp></footer-comp>
+        </section>
 
-</main>
-
-<!-- Used for routed pages such as individual blog details 
-<router-outlet></router-outlet>-->
+    </main>
+}
+    <router-outlet></router-outlet>

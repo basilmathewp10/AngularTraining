@@ -6,7 +6,7 @@ export const BlogData: BlogDataFormat[] = [
         articleId: 1,
         articleTitle: 'Understanding Angular Signals: A Modern Approach to Reactivity',
         articleDesc: 'Explore how Angular Signals simplify state management and help developers build reactive and maintainable applications.',
-        thumbImg: '/images/blog/angular.jpg',
+        thumbImg: '/images/angular-logo.png',
         pubDate: '2026-11-20',
         category: 'Angular',
         articleContent: [
@@ -50,8 +50,8 @@ export const BlogData: BlogDataFormat[] = [
     {
         articleId: 2,
         articleTitle: 'Building an AI-Powered Clinical Documentation System',
-        articleDesc: 'Discover how speech recognition, speaker diarization and language models can transform doctor-patient conversations into structured clinical notes.',
-        thumbImg: '/images/blog/clinical-ai.jpg',
+        articleDesc: 'Speech recognition, speaker diarization and language models can transform doctor-patient conversations into structured clinical notes.',
+        thumbImg: '/images/clinic-logo.png',
         pubDate: '2026-11-15',
         category: 'Artificial Intelligence',
         articleContent: [
@@ -111,7 +111,7 @@ export const BlogData: BlogDataFormat[] = [
         articleId: 3,
         articleTitle: 'Git and GitHub: A Practical Workflow for Developers',
         articleDesc: 'Learn the fundamentals of version control, commits, branches and remote repositories through a practical developer workflow.',
-        thumbImg: '/images/blog/git.jpg',
+        thumbImg: '/images/git-github-logo.png',
         pubDate: '2026-11-10',
         category: 'Software Development',
         articleContent: [
@@ -163,7 +163,7 @@ export const BlogData: BlogDataFormat[] = [
         articleId: 4,
         articleTitle: 'My Journey from JavaScript to Angular Development',
         articleDesc: 'A look at my learning journey through HTML, CSS, JavaScript and TypeScript before moving into Angular application development.',
-        thumbImg: '/images/blog/web-development.jpg',
+        thumbImg: '/images/3rd-angular-logo.webp',
         pubDate: '2026-11-05',
         category: 'Web Development',
         articleContent: [

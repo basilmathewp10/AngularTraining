@@ -4,8 +4,8 @@
 
 .tech-container h2 {
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 .skills-list {
@@ -20,11 +20,11 @@
     font-size: 28px;
     font-weight: 700;
     text-align: center;
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 20px;
     letter-spacing: 1px;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .skill-badge {
