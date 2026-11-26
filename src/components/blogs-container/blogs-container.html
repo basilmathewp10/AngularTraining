@@ -1,10 +1,17 @@
+
 <h2 class="blog-heading">Blogs</h2>
+
 <div class="blog-filter">
 
     <button type="button" class="filter-btn" (click)="showDateFilter = !showDateFilter">
         <span>Filter by Date</span>
         <span>⌄</span>
     </button>
+
+    <div class="view-toggle">
+        <button type="button" class="btn btn-primary this-button" (click)="viewMode = 'card'">Card View</button>
+        <button type="button" class="btn btn-primary this-button" (click)="viewMode = 'table'">Table View</button>
+    </div>
 
     @if (showDateFilter) {
         <div class="date-filter">
@@ -26,10 +33,37 @@
 
 </div>
 
-<div class="blog-list">
-    @for (eachBlog of filteredBlogs; track eachBlog.articleId) {
-        <blog-card [blogElement]="eachBlog"></blog-card>
-    } @empty {
+@if (viewMode === 'card') {
+
+    <div class="blog-list">
+        @for (eachBlog of filteredBlogs; track eachBlog.articleId) {
+            <blog-card [blogElement]="eachBlog"></blog-card>
+        } @empty {
+            <p>No blogs found for the selected date range.</p>
+        }
+    </div>
+
+} @else {
+
+    @if (filteredBlogs.length > 0) {
+
+        <kendo-grid [data]="filteredBlogs">
+
+            <kendo-grid-column field="articleId" title="ID" [width]="70"></kendo-grid-column>
+            <kendo-grid-column field="articleTitle" title="Blog Title"></kendo-grid-column>
+            <kendo-grid-column field="category" title="Category"></kendo-grid-column>
+            <kendo-grid-column field="pubDate" title="Published Date"></kendo-grid-column>
+            <kendo-grid-column title="Action" [width]="130">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <a [routerLink]="['/blog', dataItem.articleId]">
+                        Read More
+                    </a>
+                </ng-template>
+            </kendo-grid-column>
+        </kendo-grid>
+
+    } @else {
         <p>No blogs found for the selected date range.</p>
     }
-</div>
+
+}

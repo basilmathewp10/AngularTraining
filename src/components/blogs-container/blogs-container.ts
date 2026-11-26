@@ -2,16 +2,18 @@ import { Component,inject } from "@angular/core";
 import { BlogDataFormat } from "../../models/blog-data-format";
 import { BlogService } from "../../services/blog-service";
 import { BlogCard } from "../blog-card/blog-card";
-
-
+import { KENDO_GRID } from '@progress/kendo-angular-grid';
+import { RouterLink } from '@angular/router';
+import { DateFormatPipe } from '../../app/pipes/date-format-pipe';
 @Component({
     selector : 'blog-container',
-    imports : [BlogCard],
+    imports : [BlogCard,DateFormatPipe,KENDO_GRID,RouterLink],
     templateUrl : './blogs-container.html',
     styleUrl : './blogs-container.css'
 })
 
 export class BlogsContainer {
+    viewMode: 'card' | 'table' = 'card';
 
     blogService = inject(BlogService);
 

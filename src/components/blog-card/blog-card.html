@@ -4,7 +4,7 @@
     <div class="blog-content">
         <h3>{{ blogElement().articleTitle }}</h3>
         <p class="blog-description">{{ blogElement().articleDesc }}</p>
-        <p class="blog-date">{{ blogElement().pubDate }}</p>
+        <p class="blog-date">{{ blogElement().pubDate | dateFormat }}</p>
         <p class="blog-category">{{ blogElement().category }}</p>
         <a [routerLink]="['/blog', blogElement().articleId]">Read More</a>
     </div>

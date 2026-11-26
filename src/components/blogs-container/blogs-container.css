@@ -1,8 +1,8 @@
 .blog-filter {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 20px;  
 }
 
 .filter-btn {
@@ -89,6 +89,23 @@
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+}
+
+.view-toggle{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.this-button{
+    padding: 8px 12px;
+    background: #244B37;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 @media (max-width: 992px) {
