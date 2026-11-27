@@ -42,7 +42,7 @@
 
 @media (max-width: 768px) {
     .quick-nav {
-        position: fixed;
+        position: absolute;
         top: 90px;
         right: 16px;
         z-index: 1001;
