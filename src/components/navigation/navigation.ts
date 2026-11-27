@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,5 +8,9 @@ import { RouterLink } from '@angular/router';
     styleUrl: './navigation.css'
 })
 export class QuickNav {
+    isMenuOpen = signal(false);
 
+    closeMenu(): void {
+        this.isMenuOpen.set(false);
+    }
 }

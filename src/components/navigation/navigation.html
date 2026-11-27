@@ -1,15 +1,21 @@
-<div class="quick-nav">
+<div class="quick-nav" [class.is-open]="isMenuOpen()">
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle quick navigation menu"
+        aria-controls="quick-nav-links"
+        [attr.aria-expanded]="isMenuOpen()"
+        (click)="isMenuOpen.update(open => !open)">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <h3>Explore</h3>
-
-    <!--<a [routerLink]="[]", anchorNavigation='/about">About Me</a>
-    <a [routerLink]="[]", anchorNavigation='/projects">Projects</a>
-    <a [routerLink]="[]", anchorNavigation='/blog">Blog</a>
-    <a [routerLink]="[]", anchorNavigation='/contact">Contact</a>-->
-
-    <!--<nav class="main-nav">-->
-        <a [routerLink]="[]" fragment="about">About</a>
-        <a [routerLink]="[]" fragment="projects">Projects</a>
-        <a [routerLink]="[]" fragment="blog" >Blog</a>
-        <a [routerLink]="[]" fragment="contact" >Contact</a>
-    <!--</nav>-->
+    <nav id="quick-nav-links" aria-label="Quick navigation">
+        <a [routerLink]="[]" fragment="about" (click)="closeMenu()">About</a>
+        <a [routerLink]="[]" fragment="projects" (click)="closeMenu()">Projects</a>
+        <a [routerLink]="[]" fragment="blog" (click)="closeMenu()">Blog</a>
+        <a [routerLink]="[]" fragment="contact" (click)="closeMenu()">Contact</a>
+    </nav>
 </div>
